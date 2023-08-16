@@ -11,4 +11,4 @@ async def root(name: str = None):
 
 @app.get("/health")
 async def health():
-    return {"message": "healthy"}
+    return {"message": "health"}
