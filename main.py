@@ -4,8 +4,10 @@ app = FastAPI()
 
 
 @app.get("/")
-async def root():
-    return {"message": "Hello World"}
+async def root(name: str = None):
+    if name:
+        return {"message": f"Hello World and Hello {name}"}
+    return {"message": f"Hello World"}
 
 @app.get("/health")
 async def health():
