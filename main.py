@@ -12,3 +12,12 @@ async def root(name: str = None):
 @app.get("/health")
 async def health():
     return {"message": "health"}
+
+@app.get("/{name}")
+async def name1():
+    return "hello {name}"
+    
+
+@app.get("/name2")
+async def Lim():
+    return {"message": "Lim"}
