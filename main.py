@@ -18,5 +18,5 @@ async def name1():
     pass
 
 @app.get("/name2")
-async def name2():
-    pass
+async def Lim():
+    return {"message": "Lim"}
