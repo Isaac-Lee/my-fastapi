@@ -13,9 +13,10 @@ async def root(name: str = None):
 async def health():
     return {"message": "health"}
 
-@app.get("/name1")
+@app.get("/{name}")
 async def name1():
-    pass
+    return "hello {name}"
+    
 
 @app.get("/name2")
 async def name2():
